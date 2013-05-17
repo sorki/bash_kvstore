@@ -1,5 +1,3 @@
-#!/bin/bash
-
 KVFILE=$( mktemp )
 
 kv_get() {
