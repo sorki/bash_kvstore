@@ -7,7 +7,7 @@ kv_get() {
 }
 
 kv_set() {
-    if [ "x$( get $1 )" == "x" ]; then
+    if [ "x$( kv_get $1 )" == "x" ]; then
         echo "$1~$2" >> $KVFILE
     else
         sed -i "s/^$1~.*$/$1~$2/g" $KVFILE
